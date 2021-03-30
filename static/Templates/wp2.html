@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        font-family: cursive;
+        background-image: url("{% static 'Images/yellow.jpg'%}");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  size: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+ /* background-image: url("mintree.jpg");*/
+  
+}
+
+hr {
+  border: 1px solid #141111;
+  margin-bottom: 30px;
+}
+a:hover {
+    color: red;
+    background: #eff;
+}
+#button1{
+    width: 300px;
+    height: 100px;
+    color: rgb(18, 4, 148);
+    font-size: 25px;
+    font-family: cursive;
+    background-color: salmon;
+    text-align: center;
+}
+#button2{
+    width: 300px;
+    height: 100px;
+    color: rgb(18, 4, 148);
+    font-size: 25px;
+    font-family:cursive;
+    background-color: salmon;
+    text-align: center;
+}
+    #button4 {
+        width: 200px;
+        height: 65px;
+        color: rgb(12, 12, 17);
+        background-color: rgb(129, 24, 248);
+        font-size: 30px;
+        border: 3px solid rgb(14, 17, 14);
+        text-align: center;
+    }
+
+    button:hover {
+        opacity: 0.7;
+    } 
+#container1{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <form method='POST'>
+        <button id="button4" type="submit" formaction="/GP/login">LOGIN</button>
+        <div class="container">
+            <h1 style="font-size: 60px; font-family:Verdana; color:rgb(7, 7, 7);">REGISTRATION</h1>
+
+            <hr>
+
+            <h2 style="font-size: 50px; color: #424040;"><label for="choose"><b>How do you want to contribute?</b></label></h2>
+
+            <hr>
+
+
+
+
+            <div id="container">
+                <button type="submit" id='button1' name="financial" class="btn" formaction="/GP/info"><b>FINANCIAL</b></button>
+                <button type="submit" id='button2' name="voluntary" class="btn" formaction="/GP/info/voluntary"><b>TUTORING</b></button>
+            </div>
+
+
+
+    </form>
+
+</body>
+</html>

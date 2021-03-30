@@ -1,0 +1,89 @@
+<!DOCTYPE html>   
+<html>   
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login Page </title>
+    <style>
+        Body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+        }
+
+        button {
+            background-color: #f71909;
+            width: 100%;
+            color: orange;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text] {
+            width: 50%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid rgb(17, 19, 17);
+            box-sizing: border-box;
+        }
+
+        input[type=id] {
+            width: 30%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid rgb(14, 17, 14);
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        #button4 {
+            width: 200px;
+            height: 65px;
+            color: rgb(12, 12, 17);
+            background-color: rgb(248, 244, 24);
+            font-size: 30px;
+            border: 3px solid rgb(14, 17, 14);
+            text-align: center;
+        }
+
+        .container {
+            padding: 25px;
+            height: 1000px;
+            background-color: lightblue;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            background-image: url("{% static 'Images/image1.png'%}");
+        }
+    </style>
+</head>    
+<body>    
+   
+    <form>  
+        <div class="container">
+            <center> <h1 style="font-size: 60px; font-family:cursive; color:rgb(7, 7, 7);">Welcome! </h1> </center>      
+            <span style="font-size: 30px;"> <label>Your Name :.... </label>  </span><br><br>
+            <span style="font-size: 30px;"> <label>Your Email :.... </label>  </span><br><br>
+            <span style="font-size: 30px;"> <label>Name of GodChild :.... </label>  </span><br><br>
+            <span style="font-size: 30px;"> <label>Email of GodChild :.... </label>  </span><br><br>
+            <br> <br><br>
+           
+            <br><br><br><br><br>
+            
+             
+            
+        </div>   
+    </form> 
+    <a href='http://127.0.0.1:8000'><button>LOGOUT</button></a>
+</body>     
+</html>

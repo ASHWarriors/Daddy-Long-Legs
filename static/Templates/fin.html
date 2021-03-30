@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<title>Choice Page</title>
+
+{% load static %}
+{% csrf_token %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url("{% static 'Images/child.jpg'%}");
+            background-size: cover;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 16px;
+            background-color: rgb(19, 162, 228);
+            background-image: url("{% static 'Images/yay.png'%}");
+            height: 1000px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+
+        input[type=text], input[type=password] {
+            width: 50%;
+            padding: 15px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 5;
+            background: #faf9f9;
+        }
+
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: rgb(97, 125, 138);
+                outline-style: double;
+            }
+
+        hr {
+            border: 1px solid #141111;
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: rgb(88, 100, 112);
+        }
+
+        #button1 {
+            width: 300px;
+            height: 40px;
+            color: rgb(222, 221, 231);
+            background-color: darkblue;
+        }
+
+        #button2 {
+            width: 300px;
+            height: 40px;
+            color: rgb(232, 231, 240);
+            background-color: darkblue;
+        }
+
+        #button3 {
+            width: 300px;
+            height: 40px;
+            color: rgb(232, 231, 240);
+            background-color: darkblue;
+        }
+
+        #container1 {
+            text-align: center;
+        }
+
+        #container2 {
+            text-align: center;
+        }
+
+        #button4 {
+            width: 200px;
+            height: 30px;
+            color: rgb(12, 12, 17);
+            background-color: rgb(11, 241, 42);
+        }
+
+        input[type=text] {
+            width: 50%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #e7e1e1;
+        }
+
+            input[type=text]:focus {
+                background-color: rgb(200, 198, 212);
+                outline-style: double;
+            }
+
+        hr {
+            border: 1px solid #141111;
+            margin-bottom: 30px;
+        }
+
+        .signupbtn {
+            float: left;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <form method='POST'>
+
+
+
+        <div class="container">
+            <h1>REGISTERATION</h1>
+            <p>Please fill in your details. </p>
+            <hr>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <br><br>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name or write Anonmyuos" name="name" id="name" required>
+            <br><br><br><br>
+            <label for="choose"><b>How do you want to contribute?</b></label>
+            
+                <h1><b>FINANCIAL AID</b></h1>
+                <p>Please select your choice of donation.</p>
+                <hr>
+                <label for="choose"><b>How do you want to contribute?</b></label>
+                <br><br>
+                <label for="preference"><font color="black"> Preference </font></label><br>
+                <select name="preference">
+                    <option value="overhead_ex"> OVERHEAD</option>
+                    <option value="finaid"> FINANCIAL AID</option>
+                    <option value="health/edu">EDUCATION</option>
+                </select><br>
+                <!---
+    <div id="container1">
+        <button type="button" id="button1" name="preference" value="health/edu"><b>EDUCATION</b></button>
+        <button type="button" id="button2" name="preference" value="overhead_ex"><b>OVERHEAD</b></button>
+        <button type="button" id="button3" name="preference" value="finaid"><b>FULL FINANCIAL AID</b></button>
+    </div>--->
+                <br><br>
+                <label for="budget"><b>Amount Willing To Pay</b></label>
+                <input type="number" placeholder="In Rs." name="budget" id="budget" required>
+                <br><br><br><br>
+
+
+                <br><br><br>
+                <div id="container2">
+                    <button type="submit" name="Next" class="btn" id="button4" formaction="/GP/info/collection"><b>SUBMIT</b></button>
+                </div>
+
+            </div>
+            </div>
+
+    </form>
+
+</body>
+</html>

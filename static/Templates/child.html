@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+  font-family:cursive;
+  background-color: rgb(236, 14, 199);
+  background-image: url("{% static 'Images/yay.png'%}");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.container {
+  padding: 16px;
+  background-color: rgb(19, 162, 228);
+  background-image: url("{% static 'Images/yay.png'%}");
+  height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+#teach{
+  display:flex;
+}
+    input[type=text] {
+        width: 50%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        display: inline-block;
+        border: 5;
+        background: #eec4c4;
+    }
+
+    input[type=number] {
+        width: 20%;
+        padding: 15px;
+        display: inline-flex;
+        border: 5;
+        background: #eec4c4;
+    }
+
+        input[type=text]:focus, input[type=number]:focus {
+            background-color: rgb(217, 232, 240);
+            outline-style: double;
+        }
+
+    hr {
+        border: 1px solid #141111;
+        margin-bottom: 30px;
+    }
+
+
+
+.signupbtn {
+  float: center;
+  width: 500px;
+  height: 50px;
+  color: rgb(239, 239, 248);
+  background-color: rgb(5, 66, 3);
+}
+
+</style>
+</head>
+<body>
+
+<form method='POST'>
+    <div class="container">
+        <h1><b>REGISTERATION FOR CHILD(ORGANIZATION)</b></h1>
+        <p><b>Please fill in the details of the child carefully.</b></p>
+        <hr>
+
+        <label for="name"><b>Name :</b></label>
+        <input type="text" placeholder="Enter Name of child" name="name" id="name" required>
+        <br><br>
+        <label for="email"><b>Email :</b></label>
+        <input type="text" placeholder="Enter Email Id to be contacted on" name="email" id="email" required>
+        <br><br>
+        <label for="age"><b>Age of the Child :</b></label>
+        <input type="number" placeholder="years" name="age" required>
+        <br><br>
+        <label for="grade"><b>Grade of the Child :</b></label>
+        <input type="text" placeholder="Format = Class 5" name="grade" required>
+        <br><br>
+        <label for="teach"><b>Do you need help in studies? If YES in which subject?</b></label>
+       
+        <label for="subject"><b>Choose a Subject:</b></label>
+        <select id="sub" name="sub">
+            <option value="Mathematics">Mathematics</option>
+            <option value="Science">Science</option>
+            <option value="Hindi">Hindi</option>
+            <option value="English">English</option>
+            <option value="French">French</option>
+            <option value="Social Sciences">Social Sciences</option>
+        </select>
+        <br><br><br>
+
+        <button type="submit" class="btn" formaction="/GC/regs"><b>SUBMIT</b></button>
+    </div>
+  
+</form>
+
+</body>
+</html>

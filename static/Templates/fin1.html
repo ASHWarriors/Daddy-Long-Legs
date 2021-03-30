@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+              body {
+                  font-family: cursive;
+                  /* background-image: url("child.jpg");*/
+                  background-size: cover;
+              }
+
+              * {
+                  box-sizing: border-box;
+              }
+
+              .container {
+                  padding: 16px;
+                  background-color: rgb(19, 162, 228);
+                  background-image: url("{% static 'Images/yellow.jpg'%}");
+                  height: 1000px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  text-align: center;
+              }
+
+              input[type=text], input[type=password] {
+                  width: 50%;
+                  padding: 15px;
+                  margin: 5px 0 20px 0;
+                  display: inline-block;
+                  border: 5;
+                  background: #faf9f9;
+              }
+
+                  input[type=text]:focus, input[type=password]:focus {
+                      background-color: rgb(97, 125, 138);
+                      outline-style: double;
+                  }
+
+              hr {
+                  border: 1px solid #141111;
+                  margin-bottom: 30px;
+              }
+
+              a {
+                  color: rgb(88, 100, 112);
+              }
+
+              #button1 {
+                  width: 300px;
+                  height: 40px;
+                  color: rgb(222, 221, 231);
+                  background-color: darkblue;
+              }
+
+              #button2 {
+                  width: 300px;
+                  height: 40px;
+                  color: rgb(232, 231, 240);
+                  background-color: darkblue;
+              }
+
+              #button3 {
+                  width: 300px;
+                  height: 40px;
+                  color: rgb(232, 231, 240);
+                  background-color: darkblue;
+              }
+
+              #container1 {
+                  text-align: center;
+              }
+
+              #container2 {
+                  text-align: center;
+              }
+
+              #button4 {
+                  width: 200px;
+                  height: 40px;
+                  color: rgb(12, 12, 17);
+                  background-color: rgb(248, 244, 24);
+                  font-size: 30px;
+              }
+
+              .signupbtn {
+                  float: left;
+                  width: 50%;
+              }
+
+              .b {
+                  size: 15px;
+                  background-color: rgb(241, 234, 234);
+              }
+
+              .center {
+                  margin: 0;
+                  position: absolute;
+                  top: 100%;
+                  left: 45%;
+                  /*-ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);*/
+              }
+
+              .dropbtn {
+                  background-color: #f88b78;
+                  color: rgb(15, 15, 15);
+                  padding: 16px;
+                  font-size: 25px;
+                  border: none;
+              }
+
+              .dropdown {
+                  position: relative;
+                  display: inline-block;
+              }
+
+              .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #f5eded;
+                  min-width: 160px;
+                  box-shadow: 0px 8px 16px 0px rgba(245, 244, 244, 0.877);
+                  z-index: 1;
+              }
+
+                  .dropdown-content a {
+                      color: rgb(245, 237, 237);
+                      padding: 12px 16px;
+                      text-decoration: none;
+                      display: block;
+                  }
+
+                      .dropdown-content a:hover {
+                          background-color: #ddd;
+                      }
+
+              .dropdown:hover .dropdown-content {
+                  display: block;
+              }
+
+              .dropdown:hover .dropbtn {
+                  background-color: #fd9871;
+              }
+    </style>
+</head>
+<body>
+
+    <form>
+        <div class="container">
+            <h1 style="font-size: 50px; font-family:Verdana; color:rgb(7, 7, 7);"><b>FINANCIAL AID</b></h1>
+            <h2 style="font-size: 40px; color: #130e12;"><p>Please select your choice of donation.</p></h2>
+            <hr>
+            <span style="font-size: 30px;"><label for="email"><b>Email</b></label></span>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <br><br>
+            <span style="font-size: 30px;"><label for="name"><b>Name</b></label></span>
+            <input type="text" placeholder="Enter Name or write Anonmyuos" name="name" id="name" required>
+            <br><br><br><br>
+            <span style="font-size: 25px;"><label for="budget"><b>Amount Willing To Pay</b></label></span>
+            <input type="currency" placeholder="In Rs." name="budget" id="budget" class="b" required>
+
+            <br><br><br><br>
+            <span style="font-size: 30px;"> <label for="choose"><b>How do you want to contribute?</b></label></span>
+            <br><br>
+            <div class="dropdown">
+                <button class="dropbtn">Preference</button>
+                <div class="dropdown-content">
+
+                    <button id='button1'> <option value="overhead_ex"> OVERHEAD</option></button>
+                    <button id='button1'>  <option value="finaid"> FINANCIAL AID</option></button>
+                    <button id='button1'> <option value="health/edu">EDUCATION</option></button>
+                    <br><br>
+                </div>
+            </div>
+            <br><br>
+
+
+
+            <br><br><br><br><br>
+            <div class="center">
+                <button type="submit" class="signupbtn" id="button4"><b>SUBMIT</b></button>
+
+            </div>
+        </div>
+
+    </form>
+
+</body>
+</html>

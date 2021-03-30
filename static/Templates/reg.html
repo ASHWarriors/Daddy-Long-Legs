@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<title>Registration Completed</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url("{% static 'Images/child.jpg'%}");
+            background-size: cover;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 16px;
+            background-color: rgb(19, 162, 228);
+            background-image: url("{% static 'Images/bluep.jpg'%}");
+            height: 600px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            align-items: center;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #button4 {
+            width: 200px;
+            height: 30px;
+            color: rgb(12, 12, 17);
+            background-color: rgb(241, 57, 11);
+        }
+    </style>
+</head>
+<body>
+
+    
+        <div class="container">
+
+
+            <div class="center">
+                <h1><b>CONGRATULATIONS!</h1><br>
+                You have been registered succesfully in our database. </b>
+                <br><br>
+                <button type="button" class="btn" id="button4"><a href='http://127.0.0.1:8000'> <b>BACK</b></a></button>
+            </div>
+        </div>
+        <br><br>
+   
+
+</body>
+</html>
